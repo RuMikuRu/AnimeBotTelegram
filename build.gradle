@@ -18,7 +18,7 @@ repositories {
     mavenCentral()
 }
 
-configurations.all {
+configurations.configureEach {
     exclude module: 'slf4j-log4j12'
 }
 
@@ -31,6 +31,14 @@ dependencies {
     implementation 'com.h2database:h2:2.1.214'
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.module/jackson-module-kotlin
     implementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-kotlin', version: '2.14.1'
+
+    // https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    implementation 'com.google.code.gson:gson:2.10'
+    // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
 
 
     implementation group: 'org.telegram', name: 'telegrambots-abilities', version: '5.3.0'
